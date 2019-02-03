@@ -1,0 +1,35 @@
+{
+  "Role": "",
+  "Settings": {
+    "OutputGroups": [
+      {
+        "CustomName": "Mp4 output",
+        "Name": "File Group",
+        "Outputs": [
+          {
+            "Preset": "MPEG-4 Preset",
+            "Extension": ".mp4",
+            "NameModifier": "-mp4"
+          }
+        ],
+        "OutputGroupSettings": {
+          "Type": "FILE_GROUP_SETTINGS",
+          "FileGroupSettings": {
+            "Destination": ""
+          }
+        }
+      }
+    ],
+    "Inputs": [
+      { "AudioSelectors": {
+          "Audio Selector 1": {
+            "Offset": 0,
+            "DefaultSelection": "DEFAULT",
+            "ProgramSelection": 1
+          }
+        },
+        "FileInput": ""
+      }
+    ]
+  }
+}

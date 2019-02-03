@@ -1,0 +1,46 @@
+{
+  "Role": "arn:aws:iam::709373649578:role/MediaConvertRole",
+  "Settings": {
+    "OutputGroups": [
+      {
+        "CustomName": "Mp4 output",
+        "Name": "File Group",
+        "Outputs": [
+          {
+            "Preset": "MPEG-4 Preset",
+            "Extension": ".mp4",
+            "NameModifier": "-mp4"
+          }
+        ],
+        "OutputGroupSettings": {
+          "Type": "FILE_GROUP_SETTINGS",
+          "FileGroupSettings": {
+            "Destination": "s3://twaudby-videos/"
+          }
+        }
+      }
+    ],
+    "AdAvailOffset": 0,
+    "Inputs": [
+      {
+        "AudioSelectors": {
+          "Audio Selector 1": {
+            "Offset": 0,
+            "DefaultSelection": "DEFAULT",
+            "ProgramSelection": 1
+          }
+        },
+        "VideoSelector": {
+          "ColorSpace": "FOLLOW"
+        },
+        "FilterEnable": "AUTO",
+        "PsiControl": "USE_PSI",
+        "FilterStrength": 0,
+        "DeblockFilter": "DISABLED",
+        "DenoiseFilter": "DISABLED",
+        "TimecodeSource": "EMBEDDED",
+        "FileInput": "s3://twaudby-videos/video.flv"
+      }
+    ]
+  }
+}
